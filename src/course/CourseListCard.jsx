@@ -1,17 +1,49 @@
 import CourseItem from "./CourseItem"
+import Card from "../components/Card";
+function CourseListCard({items}) {
+  // const course1 = {
+  //   title: '입문자를 위한 HTML&CSS 웹 개발 입문', 
+  //   description: '웹 개발에 필요한 기본 지식을 배웁니다.', 
+  //   thumbnail: './img/htmlcss.png',
+  // }
 
-export default function CourseListCard() {
+  // const course2 = {
+  //   title: '입문자를 위한 ES6 최신 javscript 입문', 
+  //   description: '쉽고 알찬 내용을 준비했습니다.', 
+  //   thumbnail: './img/js.png',
+  // }
+
+  // const course3 = {
+  //   title: '포트폴리오 만들고 배포까지!', 
+  //   description: '포트폴리오 사이트를 만들고 배포까지 해보세요', 
+  //   thumbnail: './img/portfolio.png',
+  // }
+
+  const [course1, course2, course3] = items;
+  
   return (
-    <div className="card">
-      <div clasName="card__header">강의 목록</div>
+    <>
+    <Card title="강의 목록">
+    <div className="courses">
+          <CourseItem {...course1} />
+          <CourseItem {...course2} />
+          <CourseItem {...course3} />
+        </div>
+
+    </Card>
+    {/* <div className="card">
+      <div className="card__header">강의 목록</div>
       <div className="card__body">
         <div className="courses">
-          <CourseItem/>
-          <CourseItem/>
-          <CourseItem/>
+          <CourseItem {...course1} />
+          <CourseItem {...course2} />
+          <CourseItem {...course3} />
         </div>
       </div>
-    </div>
+    </div> */}
+  </>
   )
 }
 
+
+export default CourseListCard
