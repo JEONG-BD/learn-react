@@ -1,19 +1,14 @@
-import { useState } from 'react'
 import './App.css'
-import Header from "./components/Header"
-import Main from "./components/Main"
-import Footer from "./components/Footer"
+import CourseListCard from './course/CourseListCard'
 
 
 function App() {
-
   return (
-   <>
-    <Header/>
-    <Main/>
-    <Footer/>
-   Hello React</>
+    <>
+    	<main>
+        <CourseListCard/>
+      </main>
+    </>
   )
 }
-
 export default App
