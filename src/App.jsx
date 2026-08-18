@@ -10,6 +10,7 @@ function App() {
       description: '웹 개발에 필요한 기본 지식을 배웁니다.', 
       thumbnail: './img/htmlcss.png',
       isFavorite: true,
+      link: 'https://inf.run/Knpd'
     },
 
     {

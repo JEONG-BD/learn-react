@@ -37,6 +37,14 @@ function HeartBtn({isFavorite = false}){
     )
   }
 
+function LinkIconBtn({link}){
+  return (
+    <a className="btn" href="https://inf.run/JxyyT" target="_blank" rel="noreferrer">
+        <img className="btn__img" src="/img/link-icon.svg" alt=""/>
+    </a>
+
+  )
+}
 
 function CourseItem({title, description, thumbnail, isFavorite, link}) {
   // const course = {
@@ -67,11 +75,7 @@ function CourseItem({title, description, thumbnail, isFavorite, link}) {
         <div className="course__icons">
           <HeartBtn isFavorite={isFavorite}/>
           <i className="fa-solid fa-heart"></i>
-          {link && (
-            <a className="btn" href="https://inf.run/JxyyT" target="_blank" rel="noreferrer">
-              <img className="btn__img" src="/img/link-icon.svg" alt=""/>
-            </a>
-          )}
+          {link && <LinkIconBtn link={link}/>}
           
         </div>
       </article>
